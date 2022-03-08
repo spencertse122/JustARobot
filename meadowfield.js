@@ -12,3 +12,32 @@ const roads = [
     ];
 
 console.log(`Roads Array stores ${roads.length} items.`)
+
+
+// an array of strings is not very useful
+// in a map we want to look at what is linked to what
+
+function buildGraph(edges) {
+    let graph = Object.create(null)
+    function addEdge(from, to) {
+        if (graph[from] == null) {
+            graph[from] = [to]
+        } else {
+            graph[from].push(to)
+        }
+    }
+
+    // the edges.map is using the Array.prototype.map()
+    // and apply the r.split
+    // instead of iterating more, so the code is sleek
+    for (let [from, to] of edges.map(r => r.split('-'))) {
+        addEdge(from, to)
+        addEdge(to, from)
+    }
+    return graph
+}
+
+
+// example of how to use the edges
+const roadGraph = buildGraph(roads)
+
