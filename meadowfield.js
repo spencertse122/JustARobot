@@ -1,6 +1,7 @@
 // Village of Meadowfield isn't very big
 // It consists of 11 places with 14 roas between them
 
+// each road contains two locations, conencted with a -
 const roads = [
     "Alice's House-Bob's House", "Alice's House-Cabin",
     "Alice's House-Post Office", "Bob's House-Town Hall",
@@ -41,3 +42,23 @@ function buildGraph(edges) {
 // example of how to use the edges
 const roadGraph = buildGraph(roads)
 
+// The fact that something sounds like an object does not
+// automatically mean that it should be an object in your program
+
+class VillageState {
+    constructor(placce, parcles) {
+        this.place = place;
+        this.parcels = parcels;
+    }
+    move(destination) {
+        if (!roadGraph[this.place].includes(destination)) {
+            return this;
+        } else {
+            let parcels = this.parcels.map(p => {
+                if (p.place != this.place) return p;
+                return {place: destination, address: p.address};
+            }).filter(p => p.place != p.address);
+            return new VillageState(destination, parcels);
+        }
+    }
+}
