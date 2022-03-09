@@ -46,7 +46,7 @@ const roadGraph = buildGraph(roads)
 // automatically mean that it should be an object in your program
 
 class VillageState {
-    constructor(placce, parcles) {
+    constructor(place, parcels) {
         this.place = place;
         this.parcels = parcels;
     }
@@ -62,3 +62,17 @@ class VillageState {
         }
     }
 }
+
+// setting up the first village state object
+let first = new VillageState(
+    "Post Office",
+    [{place: "Post Office", address: "Alice's House"}]
+);
+
+// setting up the next village state object
+let next = first.move("Alice's House");
+
+console.log(next.place);
+console.log(next.parcels);
+console.log(first.place);
+
