@@ -76,3 +76,10 @@ console.log(next.place);
 console.log(next.parcels);
 console.log(first.place);
 
+console.log('-'.repeat(10));
+
+// Create a new object
+let object = Object.freeze({value: 5}); // freezing the value in dictionary
+object.value = 10;
+console.log(object.value);
+
