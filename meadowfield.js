@@ -186,8 +186,3 @@ function canYouSpotTheProblem() {
 
 canYouSpotTheProblem()
 
-// this is just testing out
-console.log('-'.repeat(10))
-for (i=0, i<10, I++) {
-    console.log('b' * i)
-}
