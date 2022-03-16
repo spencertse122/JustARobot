@@ -174,3 +174,15 @@ function goalOrientedRobot({place, parcels}, route) {
     }
     return {direction: route[0], memory: route.slice(1)};
 }
+
+console.log('-'.repeat(10))
+// Strict mode
+function canYouSpotTheProblem() {
+    "use strict";
+    for (counter = 0; counter < 10; counter++) {
+        console.log("Happy happy");
+    }
+}
+
+canYouSpotTheProblem()
+
