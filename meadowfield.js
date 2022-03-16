@@ -186,3 +186,5 @@ function canYouSpotTheProblem() {
 
 canYouSpotTheProblem()
 
+// this is just testing out
+console.log('-'.repeat(10))
