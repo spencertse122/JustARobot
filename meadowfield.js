@@ -176,13 +176,19 @@ function goalOrientedRobot({place, parcels}, route) {
 }
 
 console.log('-'.repeat(10))
+
 // Strict mode
 function canYouSpotTheProblem() {
     "use strict";
-    for (counter = 0; counter < 10; counter++) {
+    // for (counter = 0; counter < 10; counter++) {
+    for (let counter = 0; counter < 10; counter++) {
         console.log("Happy happy");
     }
 }
 
 canYouSpotTheProblem()
+console.log('-'.repeat(10))
 
+function Person(name) { this.name = name ;}
+let ferdinand = Person("Ferdinand");
+console.log(name)
