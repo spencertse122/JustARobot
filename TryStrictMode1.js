@@ -22,6 +22,3 @@ let ferdinand = Person("Ferdinand");
 // it's showing up, it changes the global definition
 // of the name
 console.log(name)
-
-console.log('-'.repeat(10))
-// Let's say we use strict mode
