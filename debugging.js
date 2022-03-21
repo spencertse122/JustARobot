@@ -49,3 +49,30 @@ let testArray = [2,5,6,2,3,7]
 console.log(lastElement(testArray))
 // see if it doesn't work, giving an empty array
 console.log(lastElement([]))
+
+// Exceptions
+
+// Obstacle setting and catch
+
+// Pseudo Code
+
+function promptDirection(question) {
+    let result = prompt(question);
+    if (result.toLowerCase() == "left") return "L";
+    if (result.toLowerCase() == "right") return "R";
+    throw new Error("Invalid direction: " + result);
+}
+
+function look() {
+    if (promptDirection("Which way?") == "L") {
+        return "a house";
+    } else {
+        return "two angry bears";
+    }
+}
+
+try {
+    console.log("You see", look());
+} catch (error) {
+    console.log("something went wrong: " + error);
+}
