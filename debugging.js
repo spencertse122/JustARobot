@@ -76,3 +76,33 @@ try {
 } catch (error) {
     console.log("something went wrong: " + error);
 }
+
+// CLEANING UP AFTER EXCEPTIONS
+
+// bad banking code
+
+// setting a dictionary of account and balance
+const accounts = {
+    a: 100,
+    b: 0,
+    c: 20
+};
+
+function getAccount() {
+    // prompting user what account they want to look at
+    let accountName = prompt("Enter an account name");
+    // if the account name doesn't exists in the accounts dictionary
+    if (!accounts.hasOwnProperty(accountName)) {
+        throw new Error(`No such account: ${accountName}`);
+        // throw new error
+    }
+    return accountName;
+}
+
+function transfer(from, account) {
+    if (accounts[from] < amount) return;
+    accounts[from] -= amount;
+    accounts[getAccount()] += amount;
+}
+
+console.log(accounts["a"])
